@@ -1,0 +1,4 @@
+# Separate environment: Marker 1 uses native Surya/PyTorch OCR, no llama-server.
+# Keep separate from the MCP/E5 environment's newer transformers dependency.
+marker-pdf==1.10.1
+torch>=2.7,<2.8

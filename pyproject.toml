@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "finance-rag-mcp"
+version = "0.1.0"
+description = "Source-grounded finance, risk and economics research with Marker, Chroma and FastMCP"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "fastmcp>=3.4,<4",
+  "chromadb>=1.5.9,<2",
+  "sentence-transformers>=5,<7",
+  "pydantic-settings>=2.5,<3",
+  "filelock>=3.16,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "pytest-asyncio>=0.24,<2", "ruff>=0.15,<1", "pypdf>=6,<7"]
+
+[project.scripts]
+finance-rag = "finance_rag.cli:main"
+finance-rag-mcp = "finance_rag.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/finance_rag"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["marker-master", "pdfrag-main"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

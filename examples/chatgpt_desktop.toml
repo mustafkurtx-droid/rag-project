@@ -1,0 +1,12 @@
+[mcp_servers.finance-rag]
+command = "E:/finance-rag-runtime/app-venv/Scripts/python.exe"
+args = ["-m", "finance_rag.server"]
+startup_timeout_sec = 90
+tool_timeout_sec = 300
+enabled = true
+
+[mcp_servers.finance-rag.env]
+FINRAG_ENV_FILE = "C:/Users/musta/Desktop/rag project/.env"
+FINRAG_DATA_DIR = "C:/Users/musta/Desktop/rag project/data"
+FINRAG_ALLOWED_PDF_DIR = "C:/Users/musta/Desktop/rag project/data/inbox"
+PYTHONUTF8 = "1"

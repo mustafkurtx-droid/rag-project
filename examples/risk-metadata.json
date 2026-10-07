@@ -1,0 +1,13 @@
+{
+  "title": "ÖRNEK — kendi belgenin başlığıyla değiştir",
+  "domain": "risk",
+  "document_type": "research",
+  "institution": "",
+  "publication_date": null,
+  "language": "tr",
+  "geography": "TR",
+  "risk_type": "market",
+  "tags": ["VaR", "ES", "BIST", "backtesting"],
+  "source_url": ""
+}
+

@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "finance-rag": {
+      "command": "E:/finance-rag-runtime/app-venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "finance_rag.server"
+      ],
+      "env": {
+        "FINRAG_ENV_FILE": "C:/Users/musta/Desktop/rag project/.env",
+        "FINRAG_DATA_DIR": "C:/Users/musta/Desktop/rag project/data",
+        "FINRAG_ALLOWED_PDF_DIR": "C:/Users/musta/Desktop/rag project/data/inbox",
+        "PYTHONUTF8": "1"
+      }
+    }
+  }
+}
